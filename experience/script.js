@@ -20,14 +20,15 @@ $(document).ready(function(){
 /* ===== SCROLL REVEAL ANIMATION ===== */
 const srtop = ScrollReveal({
     origin: 'top',
-    distance: '80px',
-    duration: 1000,
-    reset: true
+    distance: '60px',
+    duration: 900,
+    easing: 'cubic-bezier(.2,.8,.2,1)',
+    reset: false
 });
 
 /* SCROLL EXPERIENCE */
 srtop.reveal('.experience .timeline',{delay: 400});
-srtop.reveal('.experience .timeline .container',{interval: 400}); 
+srtop.reveal('.experience .timeline .container',{interval: 180}); 
 
 
 // Start of Tawk.to Live Chat
@@ -65,7 +66,7 @@ document.onkeydown = function(e) {
 document.addEventListener('visibilitychange',
 function(){
     if(document.visibilityState === "visible"){
-        document.title = "Experience | Portfolio Jigar Sable";
+        document.title = "Experience | Portfolio Prakash A";
         $("#favicon").attr("href","/assets/images/favicon.png");
     }
     else {

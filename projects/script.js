@@ -65,6 +65,25 @@ function showProjects(projects) {
     });
     projectsContainer.innerHTML = projectsHTML;
 
+    if (window.VanillaTilt) {
+        VanillaTilt.init(document.querySelectorAll(".tilt"), {
+            max: 10,
+            speed: 650,
+            glare: true,
+            "max-glare": 0.16,
+        });
+    }
+
+    if (window.ScrollReveal) {
+        ScrollReveal({
+            origin: 'bottom',
+            distance: '55px',
+            duration: 850,
+            easing: 'cubic-bezier(.2,.8,.2,1)',
+            reset: false
+        }).reveal('.work .grid-item', { interval: 70 });
+    }
+
     // vanilla tilt.js
     // VanillaTilt.init(document.querySelectorAll(".tilt"), {
     //     max: 20,

@@ -16,14 +16,14 @@ particlesJS('particles-js',
   {
     "particles": {
       "number": {
-        "value": 80,
+        "value": 58,
         "density": {
           "enable": true,
-          "value_area": 800
+          "value_area": 900
         }
       },
       "color": {
-        "value": "#000000"
+        "value": ["#2506ad", "#ff7b00", "#00d9ff"]
       },
       "shape": {
         "type": "circle",
@@ -41,8 +41,8 @@ particlesJS('particles-js',
         }
       },
       "opacity": {
-        "value": 0.5,
-        "random": false,
+        "value": 0.42,
+        "random": true,
         "anim": {
           "enable": false,
           "speed": 1,
@@ -51,7 +51,7 @@ particlesJS('particles-js',
         }
       },
       "size": {
-        "value": 5,
+        "value": 4,
         "random": true,
         "anim": {
           "enable": false,
@@ -62,14 +62,14 @@ particlesJS('particles-js',
       },
       "line_linked": {
         "enable": true,
-        "distance": 150,
-        "color": "#000000",
-        "opacity": 0.4,
+        "distance": 145,
+        "color": "#2506ad",
+        "opacity": 0.22,
         "width": 1
       },
       "move": {
         "enable": true,
-        "speed": 6,
+        "speed": 2.4,
         "direction": "none",
         "random": false,
         "straight": false,
@@ -86,7 +86,7 @@ particlesJS('particles-js',
       "events": {
         "onhover": {
           "enable": true,
-          "mode": "repulse"
+          "mode": "grab"
         },
         "onclick": {
           "enable": true,
@@ -96,9 +96,9 @@ particlesJS('particles-js',
       },
       "modes": {
         "grab": {
-          "distance": 400,
+          "distance": 180,
           "line_linked": {
-            "opacity": 1
+            "opacity": 0.45
           }
         },
         "bubble": {
@@ -109,7 +109,7 @@ particlesJS('particles-js',
           "speed": 3
         },
         "repulse": {
-          "distance": 200
+          "distance": 120
         },
         "push": {
           "particles_nb": 4

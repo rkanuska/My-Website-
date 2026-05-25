@@ -56,6 +56,24 @@ $(document).ready(function () {
 
 });
 
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.16,
+    rootMargin: "0px 0px -60px 0px"
+});
+
+document.querySelectorAll(".heading, .education .box, .skills .bar, .work .box, .experience .content, .contact .container")
+    .forEach((element) => {
+        element.classList.add("reveal-ready");
+        revealObserver.observe(element);
+    });
+
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
@@ -73,9 +91,10 @@ document.addEventListener('visibilitychange',
 var typed = new Typed(".typing-text", {
     strings: ["frontend development", "backend development", "web designing", "android development", "web development"],
     loop: true,
-    typeSpeed: 50,
-    backSpeed: 25,
-    backDelay: 500,
+    typeSpeed: 58,
+    backSpeed: 32,
+    backDelay: 900,
+    smartBackspace: true,
 });
 // <!-- typed js effect ends -->
 
@@ -129,7 +148,10 @@ function showProjects(projects) {
 
     // <!-- tilt js effect starts -->
     VanillaTilt.init(document.querySelectorAll(".tilt"), {
-        max: 15,
+        max: 10,
+        speed: 650,
+        glare: true,
+        "max-glare": 0.18,
     });
     // <!-- tilt js effect ends -->
 
@@ -156,7 +178,10 @@ fetchData("projects").then(data => {
 
 // <!-- tilt js effect starts -->
 VanillaTilt.init(document.querySelectorAll(".tilt"), {
-    max: 15,
+    max: 10,
+    speed: 650,
+    glare: true,
+    "max-glare": 0.18,
 });
 // <!-- tilt js effect ends -->
 
@@ -206,23 +231,19 @@ var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
 /* ===== SCROLL REVEAL ANIMATION ===== */
 const srtop = ScrollReveal({
     origin: 'top',
-    distance: '80px',
-    duration: 1000,
-    reset: true
+    distance: '60px',
+    duration: 900,
+    easing: 'cubic-bezier(.2,.8,.2,1)',
+    reset: false
 });
 
 /* SCROLL HOME */
-srtop.reveal('.home .content h3', { delay: 200 });
-srtop.reveal('.home .content p', { delay: 200 });
-srtop.reveal('.home .content .btn', { delay: 200 });
+srtop.reveal('.home .content h2', { delay: 120 });
+srtop.reveal('.home .content p', { delay: 220 });
+srtop.reveal('.home .content .btn', { delay: 320 });
 
 srtop.reveal('.home .image', { delay: 400 });
-srtop.reveal('.home .linkedin', { interval: 600 });
-srtop.reveal('.home .github', { interval: 800 });
-srtop.reveal('.home .twitter', { interval: 1000 });
-srtop.reveal('.home .telegram', { interval: 600 });
-srtop.reveal('.home .instagram', { interval: 600 });
-srtop.reveal('.home .dev', { interval: 600 });
+srtop.reveal('.home .social-icons li', { interval: 90, delay: 420 });
 
 /* SCROLL ABOUT */
 srtop.reveal('.about .content h3', { delay: 200 });
@@ -234,7 +255,7 @@ srtop.reveal('.about .content .resumebtn', { delay: 200 });
 
 /* SCROLL SKILLS */
 srtop.reveal('.skills .container', { interval: 200 });
-srtop.reveal('.skills .container .bar', { delay: 400 });
+srtop.reveal('.skills .container .bar', { interval: 80 });
 
 /* SCROLL EDUCATION */
 srtop.reveal('.education .box', { interval: 200 });
@@ -244,7 +265,7 @@ srtop.reveal('.work .box', { interval: 200 });
 
 /* SCROLL EXPERIENCE */
 srtop.reveal('.experience .timeline', { delay: 400 });
-srtop.reveal('.experience .timeline .container', { interval: 400 });
+srtop.reveal('.experience .timeline .container', { interval: 180 });
 
 /* SCROLL CONTACT */
 srtop.reveal('.contact .container', { delay: 400 });
