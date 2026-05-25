@@ -292,26 +292,6 @@ header .navbar ul li a:hover::after {
   box-shadow: 0px 5px 18px rgba(48, 68, 247, 0.6);
   font-family: "Nunito", sans-serif;
 }
-.home .btn::before,
-.resumebtn .btn::before,
-.morebtn .btn::before,
-.button-area button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -120%;
-  width: 70%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.38), transparent);
-  transform: skewX(-18deg);
-  transition: left 0.6s ease;
-}
-.home .btn:hover::before,
-.resumebtn .btn:hover::before,
-.morebtn .btn:hover::before,
-.button-area button:hover::before {
-  left: 130%;
-}
 .home .btn span {
   font-weight: 700;
   font-size: 1.7rem;
@@ -480,8 +460,6 @@ header .navbar ul li a:hover::after {
   background: #2506ad;
   box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
   font-family: "Nunito", sans-serif;
-  position: relative;
-  overflow: hidden;
 }
 .resumebtn .btn span {
   font-weight: 600;
@@ -901,8 +879,6 @@ header .navbar ul li a:hover::after {
   font-weight: 600;
   color: #02094b;
   font-family: "Font Awesome\ 5 Free";
-  box-shadow: 0 0 0 0 rgba(255, 159, 85, 0.35);
-  animation: timelinePulse 2.5s ease-out infinite;
 }
 .experience .left {
   left: 0;
@@ -981,7 +957,6 @@ header .navbar ul li a:hover::after {
   background: #2506ad;
   box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
   text-align: center;
-  overflow: hidden;
 }
 .morebtn .btn span {
   font-weight: 600;
@@ -1160,8 +1135,6 @@ form .button-area {
   box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
   transition: 0.3s ease;
   font-family: "Nunito", sans-serif;
-  position: relative;
-  overflow: hidden;
 }
 .button-area button:hover {
   background: #421cecf5;
@@ -1349,16 +1322,6 @@ form .button-area {
 }
 /* scroll top ends */
 
-.reveal-ready {
-  opacity: 0;
-  transform: translateY(2.5rem);
-}
-.reveal-ready.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.75s ease, transform 0.75s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
 @keyframes profileFloat {
   0%, 100% {
     transform: translateY(0);
@@ -1376,18 +1339,6 @@ form .button-area {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes timelinePulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 159, 85, 0.35);
-  }
-  70% {
-    box-shadow: 0 0 0 1.4rem rgba(255, 159, 85, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(255, 159, 85, 0);
   }
 }
 

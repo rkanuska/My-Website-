@@ -56,24 +56,6 @@ $(document).ready(function () {
 
 });
 
-const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            revealObserver.unobserve(entry.target);
-        }
-    });
-}, {
-    threshold: 0.16,
-    rootMargin: "0px 0px -60px 0px"
-});
-
-document.querySelectorAll(".heading, .education .box, .skills .bar, .work .box, .experience .content, .contact .container")
-    .forEach((element) => {
-        element.classList.add("reveal-ready");
-        revealObserver.observe(element);
-    });
-
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
