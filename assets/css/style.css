@@ -92,6 +92,11 @@ header {
   backdrop-filter: blur(18px);
   transition: box-shadow 0.35s ease, background 0.35s ease, transform 0.35s ease;
 }
+header.scrolled {
+  height: 6rem;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 1rem 3rem rgba(15, 23, 42, 0.14);
+}
 section {
   min-height: 100vh;
   padding: 2rem 9%;

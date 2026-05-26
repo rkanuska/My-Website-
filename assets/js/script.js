@@ -11,8 +11,10 @@ $(document).ready(function () {
 
         if (window.scrollY > 60) {
             document.querySelector('#scroll-top').classList.add('active');
+            document.querySelector('header').classList.add('scrolled');
         } else {
             document.querySelector('#scroll-top').classList.remove('active');
+            document.querySelector('header').classList.remove('scrolled');
         }
 
         // scroll spy
