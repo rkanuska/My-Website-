@@ -224,7 +224,8 @@ const srtop = ScrollReveal({
 /* SCROLL HOME */
 srtop.reveal('.home .content h2', { delay: 120 });
 srtop.reveal('.home .content p', { delay: 220 });
-srtop.reveal('.home .content .btn', { delay: 320 });
+srtop.reveal('.home .hero-highlights .highlight-item', { interval: 90, delay: 300 });
+srtop.reveal('.home .content .btn', { delay: 420 });
 
 srtop.reveal('.home .image', { delay: 400 });
 srtop.reveal('.home .social-icons li', { interval: 90, delay: 420 });
