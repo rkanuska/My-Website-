@@ -22,12 +22,12 @@
   }
 }
 
-/* Make images interactive */
-img.hoverable-image {
+/* Make marked images interactive */
+img.hoverable {
   cursor: pointer;
   transition: transform 0.2s ease;
 }
 
-img.hoverable-image:hover {
+img.hoverable:hover {
   transform: scale(1.02);
 }

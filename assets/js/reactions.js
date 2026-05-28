@@ -20,14 +20,11 @@ function createReaction(event) {
   }, 1500);
 }
 
-// Add hover listener to all images
+// Add hover listener to images with 'hoverable' class only
 document.addEventListener('DOMContentLoaded', function() {
-  const images = document.querySelectorAll('img');
+  const images = document.querySelectorAll('img.hoverable');
   
   images.forEach(img => {
-    // Add hoverable-image class for styling
-    img.classList.add('hoverable-image');
-    
     // Add mousemove listener for reactions
     img.addEventListener('mousemove', function(event) {
       // Create reaction on every mousemove (throttled effect)
