@@ -1,5 +1,5 @@
 // Photo Hover Reactions
-const reactions = ['❤️', '💕', '😍', '🤩', '🥰'];
+const reactions = ['❤️', '💕', '💖','💖','🩵','🤍','💗','🩷','❤️‍🩹','❣️'];
 
 function createReaction(event) {
   const reaction = document.createElement('div');
