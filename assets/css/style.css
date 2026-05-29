@@ -1,20 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
 
 :root {
-  --ink: #12172a;
-  --navy: #002057;
-  --primary: #2506ad;
-  --primary-dark: #1a047e;
+  --ink: #111827;
+  --navy: #111c3b;
+  --primary: #3b32f7;
+  --primary-dark: #2816b4;
   --accent: #ff7b00;
-  --gold: #ffd900;
-  --cyan: #00d9ff;
+  --gold: #ffd600;
+  --cyan: #31cbff;
   --surface: #ffffff;
-  --soft-bg: #f7f8ff;
-  --soft-blue: #e5ecfb;
-  --shadow-sm: 0 0.6rem 1.6rem rgba(15, 23, 42, 0.1);
-  --shadow-md: 0 1.4rem 3.2rem rgba(15, 23, 42, 0.16);
-  --shadow-primary: 0 1.2rem 3rem rgba(37, 6, 173, 0.28);
+  --soft-bg: #f4f7ff;
+  --soft-blue: #e8eefc;
+  --shadow-sm: 0 0.8rem 2rem rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 1.4rem 3rem rgba(15, 23, 42, 0.14);
+  --shadow-primary: 0 1.2rem 3rem rgba(59, 50, 247, 0.2);
   --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
@@ -25,7 +25,7 @@
   text-decoration: none;
   outline: none;
   border: none;
-  text-transform: capitalize;
+  text-transform: none;
 }
 html {
   font-size: 62.5%;
@@ -33,9 +33,36 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  min-height: 100vh;
   background: var(--soft-bg);
   font-family: "Poppins", sans-serif;
   color: var(--ink);
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+a,
+input,
+textarea {
+  transition: all 0.25s var(--ease);
+}
+
+:focus-visible {
+  outline: 3px solid rgba(59, 50, 247, 0.25);
+  outline-offset: 3px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  box-shadow: 0 0 0 4px rgba(59, 50, 247, 0.12);
 }
 
 *::selection {
@@ -123,17 +150,18 @@ section {
   color: rgb(115, 3, 167);
 }
 header .logo {
-  font-size: 1.9rem;
+  font-size: 2rem;
   font-weight: 800;
   text-decoration: none;
-  color: #0e2431;
+  color: var(--navy);
   transition: color 0.25s ease, transform 0.25s ease;
 }
 header .logo i {
   font-size: 2.2rem;
+  margin-right: 0.8rem;
 }
 header .logo:hover {
-  color: var(--accent);
+  color: var(--primary);
   transform: translateY(-0.2rem);
 }
 header .navbar ul {
@@ -141,6 +169,7 @@ header .navbar ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 header .navbar li {
   margin-left: 2.5rem;
@@ -264,20 +293,20 @@ header .navbar ul li a:hover::after {
   width: 100%;
 }
 .home .content {
-  flex: 1 1 40rem;
+  flex: 1 1 42rem;
   padding-top: 1rem;
   z-index: 1;
   position: relative;
 }
 .home .content::before {
-  content: "Portfolio 2026";
+  content: "Full-stack portfolio";
   display: inline-flex;
   align-items: center;
   margin-bottom: 1.4rem;
   padding: 0.8rem 1.4rem;
-  border: 1px solid rgba(37, 6, 173, 0.14);
+  border: 1px solid rgba(59, 50, 247, 0.16);
   border-radius: 5rem;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.78);
   color: var(--primary);
   box-shadow: var(--shadow-sm);
   font: 800 1.25rem "Nunito", sans-serif;
@@ -286,15 +315,17 @@ header .navbar ul li a:hover::after {
 .home .image {
   flex: 1 1 40rem;
   z-index: 1;
+  display: flex;
+  justify-content: center;
 }
 .home .image img {
-  width: 70%;
-  margin-left: 6rem;
+  width: min(34rem, 100%);
+  margin: 1rem auto;
   border-radius: 50%;
-  border: 0.8rem solid rgba(255, 255, 255, 0.85);
-  box-shadow: 0 2rem 5rem rgba(16, 24, 40, 0.18), 0 0 0 1.2rem rgba(255, 255, 255, 0.35);
-  cursor: pointer;
-  animation: profileFloat 5s ease-in-out infinite;
+  border: 0.8rem solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1.2rem 3rem rgba(16, 24, 40, 0.12), 0 0 0 0.8rem rgba(255, 255, 255, 0.35);
+  cursor: default;
+  animation: profileFloat 6s ease-in-out infinite;
   transition: transform 0.45s ease, box-shadow 0.45s ease, filter 0.45s ease;
 }
 .home .image img:hover {
@@ -303,45 +334,42 @@ header .navbar ul li a:hover::after {
   transform: scale(1.04) translateY(-0.8rem);
 }
 .home .content h2 {
-  font-size: 5rem;
+  font-size: clamp(4rem, 5vw, 5rem);
   font-weight: 800;
   color: var(--navy);
-  line-height: 1.14;
+  line-height: 1.05;
   animation: textRise 0.85s ease both;
 }
 .home .content h2 span {
-  font-size: 5rem;
+  font-size: clamp(4rem, 5vw, 5rem);
   font-weight: 800;
-  color: #ff7b00;
-  background: linear-gradient(90deg, var(--accent), #ffb000, var(--primary));
+  background: linear-gradient(90deg, var(--primary), #7c5cf7, #ff7b00);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 .home .content p {
-  font-size: 2.5rem;
-  color: #000;
+  font-size: clamp(1.9rem, 2.2vw, 2.6rem);
+  color: #242933;
   font-weight: 600;
-  padding: 1rem 0;
+  padding: 1.3rem 0;
+  max-width: 60rem;
 }
 .home .content p span {
-  font-size: 2.5rem;
-  color: rgb(148, 8, 8);
-  font-weight: 600;
-  padding: 1rem 0;
+  color: var(--primary);
 }
 .hero-highlights {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
   gap: 1rem;
-  margin: 1rem 0 1.4rem;
+  margin: 1.4rem 0 1.8rem;
 }
 .highlight-item {
-  min-width: 10rem;
-  padding: 1rem 1.3rem;
-  border: 1px solid rgba(37, 6, 173, 0.12);
-  border-radius: 0.8rem;
-  background: rgba(255, 255, 255, 0.7);
+  min-width: 12rem;
+  padding: 1.2rem 1.5rem;
+  border: 1px solid rgba(59, 50, 247, 0.14);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.88);
   box-shadow: var(--shadow-sm);
 }
 .highlight-item strong,
@@ -351,46 +379,44 @@ header .navbar ul li a:hover::after {
 }
 .highlight-item strong {
   color: var(--primary);
-  font-size: 2rem;
-  line-height: 1;
+  font-size: 2.1rem;
+  line-height: 1.1;
 }
 .highlight-item span {
-  margin-top: 0.4rem;
-  color: #445066;
+  margin-top: 0.35rem;
+  color: #4b5563;
   font: 700 1.2rem "Nunito", sans-serif;
 }
 .home .btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  margin-top: 0.4rem;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
   line-height: 1;
-  padding: 1.6rem 3rem;
-  border-radius: 4em;
+  padding: 1.5rem 2.8rem;
+  border-radius: 3.5rem;
   overflow: hidden;
   transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
   color: #fff;
-  background: linear-gradient(135deg, var(--primary), #4318d1);
-  box-shadow: 0px 5px 18px rgba(48, 68, 247, 0.6);
+  background: linear-gradient(135deg, var(--primary), #6710ff);
+  box-shadow: 0px 0.9rem 2rem rgba(59, 50, 247, 0.16);
   font-family: "Nunito", sans-serif;
 }
 .home .btn span {
   font-weight: 700;
-  font-size: 1.7rem;
-  letter-spacing: 0.1rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.06rem;
 }
 .home .btn i {
-  margin-left: 0;
   font-size: 1.5rem;
-  transition: 0.3s;
 }
 .home .btn:hover {
-  background: linear-gradient(135deg, var(--primary-dark), #3510bd);
-  box-shadow: var(--shadow-primary);
-  transform: translateY(-0.3rem);
+  background: linear-gradient(135deg, #4c33ff, #3510bd);
+  box-shadow: 0 1.3rem 2.4rem rgba(59, 50, 247, 0.2);
+  transform: translateY(-0.2rem);
 }
 .home .btn:hover i {
-  transform: translateX(5px);
+  transform: translateX(4px);
 }
 /* social icons start */
 .socials {
