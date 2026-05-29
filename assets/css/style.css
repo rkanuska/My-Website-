@@ -319,8 +319,8 @@ header .navbar ul li a:hover::after {
   justify-content: center;
 }
 .home .image img {
-  width: 70%;
-  margin-left: 6rem;
+  width: 85%;
+  margin-left: 4rem;
   border-radius: 50%;
   border: 0.8rem solid rgba(255, 255, 255, 0.85);
   box-shadow: 0 2rem 5rem rgba(16, 24, 40, 0.18), 0 0 0 1.2rem rgba(255, 255, 255, 0.35);
