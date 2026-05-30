@@ -803,18 +803,18 @@ header .navbar ul li a:hover::after {
 }
 .education .box-container .box .content .btn {
   display: inline-block;
-  margin: 1rem 0 0 1rem;
-  padding: 0.6rem 1.2rem;
-  border-radius: 0.5rem;
+  margin: 0.8rem 0 0 1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.3rem;
   color: #fff;
   background: #0c0c0c;
   text-decoration: none;
-  font-size: 1.1rem;
-  transition: transform 0.25s ease, background 0.25s ease;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.2s ease;
 }
 .education .box-container .box .content .btn:hover {
   background: #310ae0f5;
-  transform: translateY(-0.1rem);
 }
 
 /* education media queries starts*/
