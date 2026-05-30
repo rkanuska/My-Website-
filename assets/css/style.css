@@ -801,6 +801,23 @@ header .navbar ul li a:hover::after {
   font-family: "Nunito", sans-serif;
   font-weight: 700;
 }
+.education .box-container .box .content .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0 0 1rem;
+  padding: 1rem 1.8rem;
+  border-radius: 0.9rem;
+  color: #fff;
+  background: #0c0c0c;
+  text-decoration: none;
+  font-size: 1.4rem;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+.education .box-container .box .content .btn:hover {
+  background: #310ae0f5;
+  transform: translateY(-0.1rem);
+}
 
 /* education media queries starts*/
 @media screen and (max-width: 600px) {
