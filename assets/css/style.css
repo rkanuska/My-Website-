@@ -802,21 +802,27 @@ header .navbar ul li a:hover::after {
   font-weight: 700;
 }
 .education .box-container .box .content .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   margin: 0.5rem 0 0 1rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.2rem;
-  color: #fff;
-  background: #0c0c0c;
+  padding: 0.45rem 0.9rem;
+  border-radius: 0.9rem;
+  color: #0c0c0c;
+  background: #ffffff;
+  border: 1px solid rgba(12, 12, 12, 0.85);
   text-decoration: none;
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  transition: background 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   white-space: nowrap;
   max-width: fit-content;
 }
 .education .box-container .box .content .btn:hover {
-  background: #310ae0f5;
+  background: #0c0c0c;
+  color: #fff;
+  border-color: #0c0c0c;
+  transform: translateY(-0.05rem);
 }
 
 /* education media queries starts*/
