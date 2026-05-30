@@ -812,6 +812,8 @@ header .navbar ul li a:hover::after {
   font-size: 0.75rem;
   font-weight: 600;
   transition: background 0.2s ease;
+  white-space: nowrap;
+  max-width: fit-content;
 }
 .education .box-container .box .content .btn:hover {
   background: #310ae0f5;
