@@ -73,11 +73,11 @@ document.addEventListener('visibilitychange',
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["frontend development", "backend development", "web designing", "android development", "web development"],
+    strings: ["Cybersecurity Enthusiast", "Computer Science Student", "Full Stack Learner", "Problem Solver", "Tech Innovator"],
     loop: true,
-    typeSpeed: 58,
-    backSpeed: 32,
-    backDelay: 900,
+    typeSpeed: 60,
+    backSpeed: 35,
+    backDelay: 1200,
     smartBackspace: true,
 });
 // <!-- typed js effect ends -->
