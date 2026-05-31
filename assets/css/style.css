@@ -549,150 +549,180 @@ header .navbar ul li a:hover::after {
 
 /* about section starts */
 .about {
-  background:
-    radial-gradient(circle at 88% 14%, rgba(0, 217, 255, 0.06), transparent 25rem),
-    rgb(255, 255, 255);
+  background: radial-gradient(circle at 88% 14%, rgba(59, 50, 247, 0.08), transparent 30rem), #fff;
+  padding: 4rem 0 2rem;
 }
 .about .row {
   display: flex;
-  flex-direction: row;
-  gap: 3rem;
+  gap: 3.5rem;
   flex-wrap: wrap;
-  padding: 2rem;
   align-items: center;
+  padding: 2.5rem 2rem;
 }
 .about .row .image {
-  text-align: center;
-  flex: 1 1 30rem;
+  flex: 1 1 35rem;
+  min-width: 24rem;
 }
 .about .row .image img {
-  margin: 1rem 0;
-  width: 28rem;
-  height: auto;
-  border-radius: 1.2rem;
-  box-shadow: 0 1.5rem 4rem rgba(59, 50, 247, 0.12), 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
-  transition: transform 0.45s ease, box-shadow 0.45s ease, filter 0.45s ease;
+  width: 100%;
+  max-width: 38rem;
+  margin: 0 auto;
+  border-radius: 2rem;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.45s ease, filter 0.45s ease;
   cursor: pointer;
 }
 .about .row .image img:hover {
-  transform: translateY(-0.8rem) scale(1.02);
-  box-shadow: 0 2rem 5rem rgba(59, 50, 247, 0.2), 0 1rem 3rem rgba(0, 0, 0, 0.12);
-  filter: brightness(1.05);
+  transform: translateY(-0.6rem) scale(1.02);
+  filter: saturate(1.05);
 }
 .about .row .content {
   flex: 1 1 45rem;
-  padding: 2.5rem;
-  border-left: 0.3rem solid rgba(59, 50, 247, 0.12);
-  border-radius: 1.2rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(247, 248, 255, 0.75));
-  box-shadow: 0 0.8rem 2.4rem rgba(15, 23, 42, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+  padding: 3rem;
+  border-radius: 2rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(246, 248, 255, 0.9));
+  box-shadow: var(--shadow-sm);
   transition: box-shadow 0.4s ease, transform 0.4s ease;
 }
 .about .row .content:hover {
-  box-shadow: 0 1.2rem 3.6rem rgba(59, 50, 247, 0.12), inset 0 1px 1px rgba(255, 255, 255, 0.5);
-  transform: translateY(-0.4rem);
+  box-shadow: 0 1.4rem 3rem rgba(15, 23, 42, 0.1);
+  transform: translateY(-0.2rem);
 }
 .about .row .content h3 {
   color: var(--navy);
-  font-size: 2.6rem;
+  font-size: 3rem;
   font-weight: 800;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
 }
 .about .row .content .tag {
-  font-size: 1.3rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.4rem;
   color: var(--primary);
   font-weight: 600;
-  margin-top: 0.3rem;
-  display: inline-block;
-  padding: 0.4rem 0.8rem;
-  background: rgba(59, 50, 247, 0.08);
-  border-radius: 0.6rem;
+  margin-bottom: 1.8rem;
+  padding: 0.65rem 1rem;
+  background: rgba(59, 50, 247, 0.1);
+  border-radius: 1rem;
 }
 .about .row .content p {
-  font-size: 1.5rem;
-  margin-top: 1.8rem;
-  margin-bottom: 1.8rem;
+  font-size: 1.6rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
   font-family: "Nunito";
   font-weight: 500;
-  text-transform: none;
-  line-height: 1.6;
+  line-height: 1.85;
   color: #4b5563;
+  max-width: 70ch;
+}
+.highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.highlight {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.4rem;
+  background: #f7f8ff;
+  border: 1px solid rgba(59, 50, 247, 0.12);
+  border-radius: 1.2rem;
+  color: var(--ink);
+  font-size: 1.3rem;
+  font-weight: 600;
+  box-shadow: 0 0.6rem 1.3rem rgba(59, 50, 247, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.highlight:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.85rem 1.8rem rgba(59, 50, 247, 0.1);
 }
 .skills-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
-
 .badge {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: linear-gradient(135deg, rgba(59, 50, 247, 0.12), rgba(255, 123, 0, 0.08));
-  border: 1px solid rgba(59, 50, 247, 0.2);
+  padding: 0.7rem 1.2rem;
+  background: #f3f4ff;
+  border: 1px solid rgba(59, 50, 247, 0.16);
   border-radius: 2rem;
   font-size: 1.3rem;
   font-weight: 600;
-  color: var(--primary);
+  color: var(--navy);
   transition: all 0.3s ease;
   cursor: default;
 }
-
 .badge:hover {
-  background: linear-gradient(135deg, rgba(59, 50, 247, 0.2), rgba(255, 123, 0, 0.12));
-  border-color: var(--primary);
-  box-shadow: 0 0.4rem 1.2rem rgba(59, 50, 247, 0.15);
+  background: rgba(59, 50, 247, 0.12);
+  box-shadow: 0 0.6rem 1.4rem rgba(59, 50, 247, 0.08);
 }
 .resumebtn {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
 }
 .resumebtn .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.8rem;
-  padding: 1.5rem 2.8rem;
-  border-radius: 3.5rem;
-  transition: all 0.35s ease;
+  padding: 1.4rem 2.6rem;
+  border-radius: 3rem;
   color: #fff;
   background: linear-gradient(135deg, var(--primary), #6710ff);
-  box-shadow: 0 1rem 2.4rem rgba(59, 50, 247, 0.18);
+  box-shadow: 0 1.2rem 2.6rem rgba(59, 50, 247, 0.18);
   font-family: "Nunito", sans-serif;
   font-weight: 700;
-  font-size: 1.6rem;
-  letter-spacing: 0.06rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.03rem;
 }
 .resumebtn .btn i {
-  font-size: 1.5rem;
-  transition: transform 0.35s ease;
+  font-size: 1.4rem;
 }
 .resumebtn .btn:hover {
+  transform: translateY(-0.15rem);
+  box-shadow: 0 1.4rem 2.8rem rgba(59, 50, 247, 0.22);
   background: linear-gradient(135deg, #4c33ff, #3510bd);
-  box-shadow: 0 1.3rem 2.4rem rgba(59, 50, 247, 0.2);
-  transform: translateY(-0.2rem);
-}
-.resumebtn .btn:hover i {
-  transform: translateX(4px);
 }
 /* about media queries starts*/
+@media screen and (max-width: 900px) {
+  .about .row {
+    padding: 2rem 1.2rem;
+  }
+  .about .row .image,
+  .about .row .content {
+    flex: 1 1 100%;
+  }
+  .about .row .image img {
+    max-width: 30rem;
+  }
+  .about .row .content {
+    padding: 2.2rem;
+  }
+}
 @media screen and (max-width: 600px) {
   .about .row {
     gap: 1.5rem;
     padding: 1.2rem;
   }
-  .about .row .image {
-    flex: 1 1 100%;
-    text-align: center;
-  }
   .about .row .image img {
-    width: 70%;
-    margin: 0 auto;
+    width: 80%;
   }
   .about .row .content {
-    flex: 1 1 100%;
     padding: 1.8rem;
   }
-  .skills-badges {
-    margin-bottom: 1.2rem;
+  .highlight,
+  .badge {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.1rem;
+  }
+  .resumebtn .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 1.3rem 1.4rem;
   }
 }
 /* about media queries ends*/
