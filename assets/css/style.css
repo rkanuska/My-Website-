@@ -319,25 +319,26 @@ header .navbar ul li a:hover::after {
   justify-content: center;
 }
 .home .image img {
-  width: 85%;
-  margin-left: 4rem;
+  width: 70%;
+  margin-left: 2rem;
   border-radius: 50%;
   border: 0.8rem solid rgba(255, 255, 255, 0.85);
-  box-shadow: 0 2rem 5rem rgba(16, 24, 40, 0.18), 0 0 0 1.2rem rgba(255, 255, 255, 0.35);
+  box-shadow: 0 1.5rem 4rem rgba(59, 50, 247, 0.15), 0 0 0 1.2rem rgba(255, 255, 255, 0.35), inset 0 1rem 2rem rgba(255, 255, 255, 0.4);
   cursor: pointer;
-  animation: profileFloat 5s ease-in-out infinite;
+  animation: profileFloat 5s ease-in-out infinite, fadeUp 1s ease both 0.2s;
   transition: transform 0.45s ease, box-shadow 0.45s ease, filter 0.45s ease;
 }
 .home .image img:hover {
-  box-shadow: var(--shadow-primary), 0 0 0 1.2rem rgba(255, 255, 255, 0.55);
-  filter: saturate(1.08);
-  transform: scale(1.04) translateY(-0.8rem);
+  box-shadow: 0 2rem 5rem rgba(59, 50, 247, 0.25), 0 0 0 1.2rem rgba(255, 255, 255, 0.55), inset 0 1rem 2rem rgba(255, 255, 255, 0.4);
+  filter: saturate(1.12);
+  transform: scale(1.05) translateY(-0.8rem);
 }
 .home .content h2 {
   font-size: clamp(4rem, 5vw, 5rem);
   font-weight: 800;
   color: var(--navy);
   line-height: 1.05;
+  margin-bottom: 1.5rem;
   animation: textRise 0.85s ease both;
 }
 .home .content h2 span {
@@ -352,8 +353,10 @@ header .navbar ul li a:hover::after {
   font-size: clamp(1.9rem, 2.2vw, 2.6rem);
   color: #242933;
   font-weight: 600;
-  padding: 1.3rem 0;
+  padding: 0;
+  margin-bottom: 2rem;
   max-width: 60rem;
+  animation: fadeUp 0.9s ease both 0.15s;
 }
 .home .content p span {
   color: var(--primary);
@@ -362,7 +365,8 @@ header .navbar ul li a:hover::after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
   gap: 1rem;
-  margin: 1.4rem 0 1.8rem;
+  margin: 2.2rem 0 2.4rem;
+  animation: fadeUp 1s ease both 0.3s;
 }
 .highlight-item {
   min-width: 12rem;
@@ -391,7 +395,7 @@ header .navbar ul li a:hover::after {
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
-  margin-top: 0.8rem;
+  margin-top: 1.5rem;
   line-height: 1;
   padding: 1.5rem 2.8rem;
   border-radius: 3.5rem;
@@ -399,8 +403,9 @@ header .navbar ul li a:hover::after {
   transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
   color: #fff;
   background: linear-gradient(135deg, var(--primary), #6710ff);
-  box-shadow: 0px 0.9rem 2rem rgba(59, 50, 247, 0.16);
+  box-shadow: 0 1rem 2.4rem rgba(59, 50, 247, 0.18);
   font-family: "Nunito", sans-serif;
+  animation: fadeUp 1s ease both 0.4s;
 }
 .home .btn span {
   font-weight: 700;
@@ -421,7 +426,8 @@ header .navbar ul li a:hover::after {
 /* social icons start */
 .socials {
   position: relative;
-  margin-top: 2.6rem;
+  margin-top: 2.8rem;
+  animation: fadeUp 1s ease both 0.5s;
 }
 .socials .social-icons {
   padding-left: 0;
@@ -1499,6 +1505,18 @@ form .button-area {
     transform: translateY(0);
   }
 }
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
