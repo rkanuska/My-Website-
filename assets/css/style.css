@@ -361,10 +361,11 @@ header .navbar ul li a:hover::after {
   cursor: pointer;
   animation: profileFloat 5s ease-in-out infinite, fadeUp 1s ease both 0.2s;
   transition: transform 0.45s ease, box-shadow 0.45s ease, filter 0.45s ease;
+  filter: saturate(1.9) contrast(1.5) brightness(1.08) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 .home .image img:hover {
   box-shadow: 0 2rem 5rem rgba(59, 50, 247, 0.25), 0 0 0 1.2rem rgba(255, 255, 255, 0.55), inset 0 1rem 2rem rgba(255, 255, 255, 0.4);
-  filter: saturate(1.12);
+  filter: saturate(2.1) contrast(1.6) brightness(1.12) drop-shadow(0 3px 6px rgba(0, 0, 0, 0.25));
   transform: scale(1.05) translateY(-0.8rem);
 }
 .home .content h2 {
