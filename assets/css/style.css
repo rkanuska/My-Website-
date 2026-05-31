@@ -245,7 +245,7 @@ header .navbar ul li a:hover::after {
     top: 100%;
     right: -100%;
     width: 100%;
-    height: calc(100vh - 6rem);
+    height: calc(100vh - 5.2rem);
     text-align: left;
     align-items: flex-start;
     background: rgba(14, 15, 49, 0.98);
@@ -550,100 +550,128 @@ header .navbar ul li a:hover::after {
 /* about section starts */
 .about {
   background:
-    radial-gradient(circle at 88% 14%, rgba(0, 217, 255, 0.09), transparent 25rem),
+    radial-gradient(circle at 88% 14%, rgba(0, 217, 255, 0.06), transparent 25rem),
     rgb(255, 255, 255);
 }
 .about .row {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 3rem;
   flex-wrap: wrap;
-  padding: 4rem;
+  padding: 2rem;
+  align-items: center;
 }
 .about .row .image {
   text-align: center;
-  flex: 1 1 35rem;
+  flex: 1 1 30rem;
 }
 .about .row .image img {
-  margin: 4rem;
-  width: 30rem;
+  margin: 1rem 0;
+  width: 28rem;
   height: auto;
-  border-radius: 5%;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
-  mix-blend-mode: luminosity;
-  transition: transform 0.45s ease, box-shadow 0.45s ease, mix-blend-mode 0.45s ease;
+  border-radius: 1.2rem;
+  box-shadow: 0 1.5rem 4rem rgba(59, 50, 247, 0.12), 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
+  transition: transform 0.45s ease, box-shadow 0.45s ease, filter 0.45s ease;
   cursor: pointer;
 }
 .about .row .image img:hover {
-  mix-blend-mode: normal;
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+  transform: translateY(-0.8rem) scale(1.02);
+  box-shadow: 0 2rem 5rem rgba(59, 50, 247, 0.2), 0 1rem 3rem rgba(0, 0, 0, 0.12);
+  filter: brightness(1.05);
 }
 .about .row .content {
   flex: 1 1 45rem;
-  padding: 3rem;
-  border-left: 0.35rem solid rgba(37, 6, 173, 0.18);
-  border-radius: 0.8rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(247, 248, 255, 0.72));
-  box-shadow: var(--shadow-sm);
+  padding: 2.5rem;
+  border-left: 0.3rem solid rgba(59, 50, 247, 0.12);
+  border-radius: 1.2rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(247, 248, 255, 0.75));
+  box-shadow: 0 0.8rem 2.4rem rgba(15, 23, 42, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+.about .row .content:hover {
+  box-shadow: 0 1.2rem 3.6rem rgba(59, 50, 247, 0.12), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+  transform: translateY(-0.4rem);
 }
 .about .row .content h3 {
-  color: rgb(27, 27, 27);
-  font-size: 2.5rem;
+  color: var(--navy);
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
 }
 .about .row .content .tag {
-  font-size: 1.4rem;
-  color: #020133;
+  font-size: 1.3rem;
+  color: var(--primary);
   font-weight: 600;
-  margin-top: 1rem;
+  margin-top: 0.3rem;
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background: rgba(59, 50, 247, 0.08);
+  border-radius: 0.6rem;
 }
 .about .row .content p {
   font-size: 1.5rem;
-  margin-top: 1.5rem;
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem;
   font-family: "Nunito";
-  font-weight: 600;
+  font-weight: 500;
   text-transform: none;
+  line-height: 1.6;
+  color: #4b5563;
 }
-.about .row .content .box-container {
+.skills-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  font-family: "Nunito";
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, rgba(59, 50, 247, 0.12), rgba(255, 123, 0, 0.08));
+  border: 1px solid rgba(59, 50, 247, 0.2);
+  border-radius: 2rem;
+  font-size: 1.3rem;
   font-weight: 600;
+  color: var(--primary);
+  transition: all 0.3s ease;
+  cursor: default;
 }
-.about .row .content .box-container .box p {
-  text-transform: none;
-}
-.about .row .content .box-container .box p span {
-  color: #011aff;
+
+.badge:hover {
+  background: linear-gradient(135deg, rgba(59, 50, 247, 0.2), rgba(255, 123, 0, 0.12));
+  border-color: var(--primary);
+  box-shadow: 0 0.4rem 1.2rem rgba(59, 50, 247, 0.15);
 }
 .resumebtn {
-  margin-top: 6rem;
+  margin-top: 1.5rem;
 }
 .resumebtn .btn {
-  padding: 1.7rem 3rem;
-  border-radius: 0.5em;
-  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.5rem 2.8rem;
+  border-radius: 3.5rem;
+  transition: all 0.35s ease;
   color: #fff;
-  background: linear-gradient(135deg, var(--primary), #4318d1);
-  box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
+  background: linear-gradient(135deg, var(--primary), #6710ff);
+  box-shadow: 0 1rem 2.4rem rgba(59, 50, 247, 0.18);
   font-family: "Nunito", sans-serif;
-}
-.resumebtn .btn span {
-  font-weight: 600;
-  font-size: 1.8rem;
-  letter-spacing: 0.1rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.06rem;
 }
 .resumebtn .btn i {
-  margin-left: 0.3rem;
-  font-size: 1.2rem;
-  transition: 0.3s;
+  font-size: 1.5rem;
+  transition: transform 0.35s ease;
 }
 .resumebtn .btn:hover {
-  background: #1a047e;
+  background: linear-gradient(135deg, #4c33ff, #3510bd);
+  box-shadow: 0 1.3rem 2.4rem rgba(59, 50, 247, 0.2);
+  transform: translateY(-0.2rem);
 }
 .resumebtn .btn:hover i {
-  transform: translateX(5px);
+  transform: translateX(4px);
 }
 /* about media queries starts*/
 @media screen and (max-width: 600px) {
