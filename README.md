@@ -1,90 +1,61 @@
-# My-Website-
-🌐 Prakash A – Portfolio Website
-📌 About
+# Prakash A Portfolio Website
 
-This is my personal portfolio website created to showcase my skills, projects, and contact information.
-The website represents my journey as a Computer Science student and aspiring developer.
+A responsive personal portfolio website built to showcase Prakash A’s skills, projects, education, experience, and contact information.
 
-Through this portfolio, visitors can learn about:
+## About
 
-My technical skills
+This project is a professional portfolio website created for a Computer Science student and aspiring developer. It highlights core strengths in web development, backend engineering, and cybersecurity while providing an easy way for visitors and recruiters to get in touch.
 
-My projects
+## Features
 
-My education
+- Responsive hero section with animated particles and profile avatar
+- Dynamic skill and highlights section
+- Projects showcase with interactive cards and tilt effects
+- About section with education, interests, and career goals
+- Experience and work sections with polished UI components
+- Contact links with EmailJS integration for form submissions
+- Mobile-friendly navigation and smooth scrolling
 
-How to contact me
+## Technologies Used
 
-👨‍💻 About Me
+- HTML5
+- CSS3
+- JavaScript
+- Font Awesome icons
+- particles.js for animated background
+- Vanilla Tilt for element hover effects
+- EmailJS for contact form submissions
 
-Hello! I'm Prakash A, a Computer Science student passionate about technology, programming, and cybersecurity.
+## Project Structure
 
-I enjoy learning new technologies and building projects that improve my skills. My goal is to become a skilled software developer and cybersecurity professional.
-🛠️ Technologies Used
+- `index.html` — main portfolio page
+- `assets/css/style.css` — global styling and layout
+- `assets/js/script.js` — page interactions, navigation, tilt effects, and contact form handling
+- `assets/js/particles.min.js` — background particle animations
+- `assets/images/hero.jpg` — profile hero image
+- `experience/index.html` — experience section page
+- `projects/index.html` — projects showcase page
 
-The portfolio website is built using the following technologies:
+## How to Run Locally
 
-HTML5 – Structure of the website
+1. Clone the repository:
 
-CSS3 – Styling and design
-JavaScript – Interactive features
+```bash
+git clone https://github.com/prakashalagundagi/My-Website-.git
+```
 
-EmailJS – Contact form functionality
-📂 Website Sections
-🏠 Home
+2. Open the project folder.
+3. Open `index.html` in your browser.
 
-Introduction and quick overview of who I am.
+## Live Demo
 
-👤 About
+https://prakashalagundagi.github.io/My-Website-/
 
-Information about my education, interests, and career goals.
+## Contact
 
-💻 Skills
+- Email: prakashalagundagi20@gmail.com
+- LinkedIn: https://www.linkedin.com/in/prakash-alagundagi-56068b263/
 
-Shows my technical skills such as:
+---
 
-Programming
-
-Web development
-
-Problem solving
-
-📁 Projects
-
-Displays the projects I have worked on.
-
-📞 Contact
-
-A contact form that allows visitors to send me a message directly through email.
-
-🎯 Purpose of This Website
-
-The purpose of this portfolio is to:
-
-Showcase my skills and projects
-
-Build my online presence
-
-Help recruiters and collaborators know more about me
-
-🚀 How to Run This Website
-
-Download or clone the repository
-
-git clone  https://prakashalagundagi.github.io/My-Website-/
-
-Open the folder.
-
-Open index.html in your browser.
-
-📬 Contact Me
-
-If you want to connect with me:
-
-📧 Email: prakashalagundagi20gmail.com
-
-🌐 Portfolio: https://prakashalagundagi.github.io/My-Website-/
-
-💼 LinkedIn: https://www.linkedin.com/in/prakash-alagundagi-56068b263/
-
-⭐ Thank you for visiting my portfolio!
+Thank you for visiting the portfolio. Feel free to use this repository as a starter for a personal website or a frontend portfolio showcase.
